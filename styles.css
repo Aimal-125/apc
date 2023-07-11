@@ -52,7 +52,7 @@
 }
 .p2 {
     font-size: 2.5vh;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 1);
     font-weight: lighter;
 }
 .div1 img {
@@ -159,7 +159,7 @@
     font-weight: 500;
 }
 .namediv p:nth-child(2) {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 1);
     font-weight: 400;
 }
 
