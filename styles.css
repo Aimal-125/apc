@@ -1,0 +1,341 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+    font-family: ubuntu, sans-serif;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-top: 1rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: hsl(210, 46%, 95%);
+}
+.miniContainer {
+    width: 80%;
+    height: 50%;
+    border-radius: 10px;
+    display: flex;
+    background: white;
+}
+.div1 {
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.div2 {
+    width: 60%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.p1 {
+    font-size: 3.5vh;
+    font-weight: 400;
+}
+.p2 {
+    font-size: 2.5vh;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: lighter;
+}
+.div1 img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.imgdiv {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+.pdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pdiv span img {
+    display: block;
+    width: 50%;
+    height: 50%;
+    clip-path: circle(50%);
+}
+.micdiv {
+    width: 120px;
+}
+.namediv {
+    display: flex;
+    flex-direction: column;
+    font-size: 2vh;
+    gap: 0.3rem;
+    position: relative;
+    left: -45px;
+}
+.imgdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.sharediv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: white;
+    position: relative;
+    right: 0;
+    transform: translateX(-120%);
+    cursor: pointer;
+    transition: 0.2s;
+    background: hsl(210, 46%, 95%);
+}
+.sharediv:hover {
+    transition: 0.2s;
+    box-shadow: 0px 0px 1px 0px black;
+}
+.socialdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    top: -100%;
+    right: -50px;
+    background: hsl(217, 19%, 35%);
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    visibility: hidden;
+    transition: 0.1s ease-in-out;
+    box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.s1 {
+    font-weight: 500;
+    color: hsl(214, 17%, 51%);
+}
+.s1, .s2, .s3, .s4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tri {
+    width: 0;
+    height: 0;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-top: 15px solid black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 90%);
+}
+.sharediv span img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.namediv p:nth-child(1) {
+    font-weight: 500;
+}
+.namediv p:nth-child(2) {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+}
+
+@media screen and (min-width: 600px) {
+    .p1 {
+        font-size: 4vh;
+    }
+    .p2 {
+        font-size: 3vh;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .p1 {
+        font-size: 3vh;
+        font-weight: 500;
+    }
+    .p2 {
+        font-size: 2.5vh;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .miniContainer {
+        width: 95%;
+        height: 85%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+    .div1 {
+        width: 40%;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+    .div2 {
+        width: 60%;
+        height: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .div1 img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+    .sharediv {
+        transform: translateX(-145%);
+    }
+    .socialdiv {
+        right: -40px;
+    }
+    .pdiv span img {
+        position: initial;
+        transform: none;
+    }
+    .namediv p {
+        font-size: 3vh;
+    }
+    .namediv {
+        position: relative;
+        left: -45px;
+    }
+    .p1 {
+        font-size: 5vh;
+    }
+    .p2 {
+        font-size: 3.5vh;
+        word-spacing: 2px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .p1 {
+        font-size: 3vh;
+    }
+    .p2 {
+        font-size: 2vh;
+    }
+    .pdiv span img {
+        width: 100%;
+        height: 100%;
+    }
+    .namediv {
+        left: 30px;
+    }
+    .sharediv {
+        width: 100px;
+        height: 100px;
+    }
+    .socialdiv {
+        width: 460px;
+        height: 100px;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .container {
+        height: 100vh;
+    }
+    .miniContainer {
+        flex-direction: column;
+        width: 90%;
+        height: 80%;
+    }
+    .div1 {
+        width: 100%;
+        height: 40%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .div1 img {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .div2 {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        width: 100%;
+        height: 60%;
+        position: relative;
+        justify-content: initial;
+        gap: 1.5rem;
+    }
+    .imgdiv {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 1rem 2rem;
+    }
+    .sharediv {
+        transform: none;
+    }
+    .sharediv:hover {
+        background: white !important;
+    }
+    .socialdiv {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0 2rem;
+    }
+    .tri {
+        display: none;
+    }
+    .p1 {
+        font-size: 3vh;
+    }
+    .p2 {
+        font-size: 2vh;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .p1 {
+        font-size: 2.5vh;
+    }
+    .p2 {
+        font-size: 2vh;
+    }
+    .namediv p:nth-child(1) {
+        font-size: 1.5vh;
+    }
+    .namediv p:nth-child(2) {
+        font-size: 1.3vh;
+    }
+}
